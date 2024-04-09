@@ -12,7 +12,7 @@ public class Main {
 //        System.out.println("largura: " + width);
 //        System.out.println("altura: " + height);
 //        System.out.println("total de pixels: " + (height * width));
-        BufferedImage image2 = ManipulaImagem.abrirImagem("C:\\Users\\autologon\\Downloads\\OIP.jpg");
+        BufferedImage image2 = ManipulaImagem.abrirImagem("C:\\Users\\julio\\OneDrive\\Imagens\\Capturas de tela\\slaythespire.png");
         int height2 = image2.getHeight();
         int width2 = image2.getWidth();
 
@@ -25,14 +25,21 @@ public class Main {
 //
 //        System.out.println(Arrays.toString(image.getRGB(0, 0, width, height, null, 0, width)));
 
-        OperacoesPontuais.criarBandasRGB(image2, height2, width2);
-        OperacoesPontuais.criarNegativo(image2, height2, width2);
-        OperacoesPontuais.criarGrayscale(image2, height2, width2);
-        OperacoesPontuais.criarBinarizacao(image2, height2, width2);
-        OperacoesPontuais.aumentoTonalidade(image2, height2, width2, "red", 50);
-        OperacoesPontuais.criarBrilhoAumentado(image2, height2, width2, 50);
-        OperacoesPontuais.criarBrilhoAumentadoMulti(image2, height2, width2, 1.6f);
+//        OperacoesPontuais.criarBandasRGB(image2, height2, width2);
+//        OperacoesPontuais.criarNegativo(image2, height2, width2);
+//        OperacoesPontuais.criarGrayscale(image2, height2, width2);
+//        OperacoesPontuais.criarBinarizacao(image2, height2, width2);
+//        OperacoesPontuais.aumentoTonalidade(image2, height2, width2, "red", 50);
+//        OperacoesPontuais.criarBrilhoAumentado(image2, height2, width2, 50);
+//        OperacoesPontuais.criarBrilhoAumentadoMulti(image2, height2, width2, 1.6f);
 //        ManipulaImagem.exibirImagens(image2);
+//        OperacoesPontuais.criarBrilhoAumentadoEmY(image2, height2, width2, 100);
+//        OperacoesPontuais.criarBrilhoAumentadoEmYMulti(image2, height2, width2, 2);
+        OperacoesPontuais.criarNegativoEmY(image2, height2, width2);
+//        Color thiscolor = new Color(image2.getRGB(2000, 500));
+//        System.out.println(thiscolor);
+//        double[] myYIQ = OperacoesPontuais.RGBtoYIQ(thiscolor);
+//        OperacoesPontuais.YIQtoRGB(myYIQ);
 
 //        ManipulaImagem.salvarImagem(image2, "jpg", new File("C:\\Users\\julio\\Downloads\\imagem_salva.jpg"));
     }
