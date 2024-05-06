@@ -1,8 +1,6 @@
 package app;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +10,7 @@ public class Main {
 //        System.out.println("largura: " + width);
 //        System.out.println("altura: " + height);
 //        System.out.println("total de pixels: " + (height * width));
-        BufferedImage image2 = ManipulaImagem.abrirImagem("C:\\Users\\julio\\OneDrive\\Imagens\\Capturas de tela\\slaythespire.png");
+        BufferedImage image2 = ManipulaImagem.abrirImagem("C:\\Users\\julio\\Downloads\\menino.png");
         int height2 = image2.getHeight();
         int width2 = image2.getWidth();
 
@@ -35,13 +33,26 @@ public class Main {
 //        ManipulaImagem.exibirImagens(image2);
 //        OperacoesPontuais.criarBrilhoAumentadoEmY(image2, height2, width2, 100);
 //        OperacoesPontuais.criarBrilhoAumentadoEmYMulti(image2, height2, width2, 2);
-        OperacoesPontuais.criarNegativoEmY(image2, height2, width2);
+//        OperacoesPontuais.criarNegativoEmY(image2, height2, width2);
 //        Color thiscolor = new Color(image2.getRGB(2000, 500));
 //        System.out.println(thiscolor);
 //        double[] myYIQ = OperacoesPontuais.RGBtoYIQ(thiscolor);
 //        OperacoesPontuais.YIQtoRGB(myYIQ);
 
 //        ManipulaImagem.salvarImagem(image2, "jpg", new File("C:\\Users\\julio\\Downloads\\imagem_salva.jpg"));
+
+//        ------ OPERAÇÕES LOCAIS ------
+        int[][] horizontal = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
+        int[][] vertical = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
+        int[][] linhasOeste = {{1, 1, -1}, {1, -2, -1}, {1, 1, -1}};
+        int[][] laplaciano = {{0, -1, 0}, {-1, 4, -1}, {0, -1, 0}};
+//        OperacoesLocais.convolucionalGaussiano(image2);
+//        OperacoesLocais.convolucionalMedia(image2);
+//        OperacoesLocais.convolucionalMediana(image2);
+        OperacoesLocais.convolucional(image2, horizontal);
+//        OperacoesLocais.convolucional(image2, vertical);
+//        OperacoesLocais.convolucional(image2, linhasOeste);
+//        OperacoesLocais.convolucional(image2, laplaciano);
     }
 
 }
